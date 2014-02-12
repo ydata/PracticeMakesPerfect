@@ -55,11 +55,24 @@ private:
   stack<int> sortStack(stack<int>& s);
 };
 
+struct Graph;
+struct GraphNode;
+struct TreeNode;
+
 class CC4ch4 : public Base
 {
 public:
   void run();
 
 private:
+  bool searchRoute(Graph* g, GraphNode* start, GraphNode* end);
 
+  TreeNode* addToTree(vector<int>& arr, int start, int end);
+  TreeNode* createMinBST(vector<int>& arr);
+
+  vector< vector<TreeNode*> > bstToLevelArrays(TreeNode* root);
+
+  TreeNode* inorderSucc(TreeNode* node);
+  TreeNode* leftMostChild(TreeNode* node);
 };
+
