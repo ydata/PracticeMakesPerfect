@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -29,7 +30,32 @@ private:
   void rotateMatrix(vector< vector<int> >& matrix);
 };
 
+struct LinkedListNode;
+
 class CC4ch2 : public Base
+{
+public:
+  void run();
+
+private:
+  void deleteDups(LinkedListNode* head);
+  void deleteDups2(LinkedListNode* head);
+
+  LinkedListNode* nthToLast(LinkedListNode* head, int n);
+
+  LinkedListNode* addLists(LinkedListNode* l1, LinkedListNode* l2, int carry);
+};
+
+class CC4ch3 : public Base
+{
+public:
+  void run();
+
+private:
+  stack<int> sortStack(stack<int>& s);
+};
+
+class CC4ch4 : public Base
 {
 public:
   void run();

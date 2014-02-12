@@ -27,6 +27,12 @@
     <ClCompile Include="CC4ch2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CC4ch3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CC4ch4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classdefs.h">
