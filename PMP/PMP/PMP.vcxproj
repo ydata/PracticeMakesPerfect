@@ -83,6 +83,7 @@
     <ClCompile Include="CC4ch2.cpp" />
     <ClCompile Include="CC4ch3.cpp" />
     <ClCompile Include="CC4ch4.cpp" />
+    <ClCompile Include="CC4ch8.cpp" />
     <ClCompile Include="PMP.cpp" />
   </ItemGroup>
   <ItemGroup>

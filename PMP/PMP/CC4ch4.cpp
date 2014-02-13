@@ -3,6 +3,7 @@
 #include "classdefs.h"
 #include <vector>
 #include <queue>
+#include <iostream>
 
 void CC4ch4::run() {
 
@@ -115,5 +116,21 @@ TreeNode* CC4ch4::leftMostChild(TreeNode* node) {
 
   while (node->left != NULL)  node = node->left;
   return node;
+}
+
+void CC4ch4::findSum(TreeNode* head, int sum, vector<int> buffer, int level) {
+  if (head == NULL) return;
+  int tmp = 0;
+  buffer.push_back(head->data);
+  for (int i = level; i > -1; --i) {
+    tmp += buffer[i];
+    if (tmp == sum) {
+      for (int j = i; j <= level; ++j)  cout << buffer[j] << "";
+    }
+  }
+  vector<int> b1 = buffer;
+  vector<int> b2 = buffer;
+  findSum(head->left, sum, b1, level + 1);
+  findSum(head->right, sum, b2, level + 1);
 }
 

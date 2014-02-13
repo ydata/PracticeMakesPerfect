@@ -33,6 +33,9 @@
     <ClCompile Include="CC4ch4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CC4ch8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classdefs.h">

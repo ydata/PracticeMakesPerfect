@@ -74,5 +74,19 @@ private:
 
   TreeNode* inorderSucc(TreeNode* node);
   TreeNode* leftMostChild(TreeNode* node);
+
+  void findSum(TreeNode* head, int sum, vector<int> buffer, int level);
 };
 
+class CC4ch8 : public Base
+{
+public:
+  void run();
+
+private:
+  int fibo(int n);
+  int fiboIterative(int);
+
+  vector<string> getPerms(string s);
+  string insertCharAt(string word, char c, int i);
+};
