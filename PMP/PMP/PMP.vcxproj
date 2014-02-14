@@ -81,10 +81,13 @@
   <ItemGroup>
     <ClCompile Include="CC4ch1.cpp" />
     <ClCompile Include="CC4ch2.cpp" />
+    <ClCompile Include="CC4ch20.cpp" />
     <ClCompile Include="CC4ch3.cpp" />
     <ClCompile Include="CC4ch4.cpp" />
     <ClCompile Include="CC4ch8.cpp" />
+    <ClCompile Include="CC4ch9.cpp" />
     <ClCompile Include="PMP.cpp" />
+    <ClCompile Include="Singleton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classdefs.h" />

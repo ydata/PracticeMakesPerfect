@@ -44,6 +44,8 @@ private:
   LinkedListNode* nthToLast(LinkedListNode* head, int n);
 
   LinkedListNode* addLists(LinkedListNode* l1, LinkedListNode* l2, int carry);
+
+  void destroyLinkedList(LinkedListNode** head);
 };
 
 class CC4ch3 : public Base
@@ -89,4 +91,25 @@ private:
 
   vector<string> getPerms(string s);
   string insertCharAt(string word, char c, int i);
+
+  void printPar(int l, int r, string str, int index);
+
+  int makeChange(int n, int denom);
+};
+
+class CC4ch9 : public Base
+{
+public:
+  void run();
+
+private:
+  int search(vector<int> arr, int x);
+};
+
+class CC4ch20 : public Base
+{
+public:
+  void run();
+
+private:
 };

@@ -6,7 +6,6 @@
 #include <iostream>
 
 void CC4ch4::run() {
-
 }
 
 enum GraphNodeState { UNVISITED, VISITING, VISITED };

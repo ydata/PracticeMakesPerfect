@@ -59,3 +59,41 @@ string CC4ch8::insertCharAt(string word, char c, int i) {
   string end = word.substr(i);
   return start + c + end;
 }
+
+void CC4ch8::printPar(int l, int r, string str, int index) {
+  if (l < 0 || r < l) return;
+  if ( (l == 0) && (r == 0) )   cout << str << endl;
+  if (l > 0) {
+    str[index] = '(';
+    printPar(l - 1, r, str, index + 1);
+  }
+  if (r > l) {
+    str[index] = ')';
+    printPar(l, r - 1, str, index + 1);
+  }
+}
+
+int CC4ch8::makeChange(int n, int denom) {
+  if (n == 0) return 0;
+
+  int next_denom = 0;
+  switch (denom) {
+  case 25:
+    next_denom = 10;
+    break;
+  case 10:
+    next_denom = 5;
+    break;
+  case 5:
+    next_denom = 1;
+    break;
+  case 1:
+    return 1;
+  }
+
+  int ways = 0;
+  for (int i = 0; i * denom <= n; ++i) {
+    ways += makeChange(n - i * denom, next_denom);
+  }
+  return ways;
+}

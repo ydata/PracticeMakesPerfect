@@ -38,6 +38,7 @@ void CC4ch2::run() {
   if (nth_to_last) {
     cout << nth_to_last->data << endl;
   }
+  destroyLinkedList(head);
   */
 
   LinkedListNode* l1 = new LinkedListNode(3);
@@ -67,6 +68,10 @@ void CC4ch2::run() {
     curr = curr->next;
   }
   cout << endl;
+
+  destroyLinkedList(&l1);
+  destroyLinkedList(&l2);
+  destroyLinkedList(&sum);
 }
 
 void CC4ch2::deleteDups(LinkedListNode* head) {
@@ -146,4 +151,18 @@ LinkedListNode* CC4ch2::addLists(LinkedListNode* l1, LinkedListNode* l2, int car
   LinkedListNode* more = addLists(l1 == NULL ? NULL : l1->next, l2 == NULL ? NULL : l2->next, value > 10 ? 1 : 0);
   result->next = more;
   return result;
+}
+
+void CC4ch2::destroyLinkedList(LinkedListNode** head) {
+  if (*head)  return;
+
+  LinkedListNode* prev = *head;
+  LinkedListNode* curr = prev->next;
+  while (curr != NULL) {
+    delete prev;
+    prev = curr;
+    curr = curr->next;
+  }
+
+  *head = NULL;
 }
